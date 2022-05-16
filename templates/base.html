@@ -1,0 +1,36 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+	<link rel="stylesheet" href="{% static 'css/styles.css' %}">
+	{% block title %}<title>Лучшие фигуристы России</title>{% endblock %}
+</head>
+<body class="body_base">
+<header>
+	<div class="menu">
+		<a href="/">Главная</a>
+  		<a href="{% url 'skaters' %}">Спортсмены</a>
+  		<a href="{% url 'trainers' %}">Тренеры</a>
+  		<a href="{% url 'elements' %}">Элементы</a>
+  		<a href="#">Admin</a>
+  		<div class="search-container">
+    		<form action="/action_page.php">
+      			<input type="text" placeholder="Поиск.." name="search">
+      			<button type="submit"><i class="fa fa-search"></i></button>
+    		</form>
+    	</div>
+</div>; 
+<main class="content">
+	{% block content %}<!-- Content -->{% endblock %}
+</main>
+<footer class="caption">Короткова Александра</footer>
+</body>
+</html>

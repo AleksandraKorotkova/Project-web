@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<h1 font-size=32px><font color="white" face="Times New Roman" >Спортсмены</font></h1>
+{% for sportsman in skater_list %}
+      <li>
+        <a href="{{ sportsman.get_absolute_url_skater }}">{{ sportsman.name_skater }}  {{sportsman.surname_skater}}</a> 
+      </li>
+      {% endfor %}
+{% endblock %}

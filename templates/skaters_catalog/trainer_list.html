@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<h1 font-size=32px><font color="white" face="Times New Roman" >Тренеры</font></h1>
+{% for coach in trainer_list %}
+      <li>
+        <a href="{{ coach.get_absolute_url_trainer }}">{{ coach.name_trainer }}  {{coach.surname_trainer}}</a> 
+      </li>
+      {% endfor %}
+{% endblock %}
